@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name:  helloworld
+  description: Hello Worldサービスです
+  labels:
+    app: helloworld
+  links:
+    - url: https://github.com/rhdh-practice/helloworld 
+      title: App Repository
+      icon: github
+  annotations:
+    backstage.io/kubernetes-label-selector: 'app=helloworld'
+    backstage.io/kubernetes-namespace: helloworld
+    argocd/app-selector: app.kubernetes.io/instance=helloworld-init
+spec:
+  type: website
+  owner: user:default/skitamura7446
+  lifecycle: production
