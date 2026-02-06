@@ -12,8 +12,7 @@ metadata:
   annotations:
     backstage.io/kubernetes-label-selector: 'app=helloworld'
     backstage.io/kubernetes-namespace: helloworld
-    argocd/app-selector: argocd.argoproj.io/instance=helloworld-init
-    argocd/app-selector: argocd.argoproj.io/instance=helloworld
+    argocd/app-selector: backstage-app=helloworld
 spec:
   type: website
   owner: user:default/skitamura7446
